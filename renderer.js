@@ -8,3 +8,4 @@ const ipcRenderer = electron.ipcRenderer;
 ipcRenderer.on('main-process-messages', (event, message) => {
   console.log('message from Main Process: ' , message);  // Prints Main Process Message.
 });
+// ipcRenderer.sendSync('synchronous-message', 'hello');
