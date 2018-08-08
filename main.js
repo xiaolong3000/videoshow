@@ -10,7 +10,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
    mainWindow.webContents.openDevTools()
@@ -22,9 +22,10 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
-  mainWindow.webContents.on('did-finish-load', () => {
-    mainWindow.webContents.send('main-process-messages', 'webContents event "did-finish-load" called');
-  });
+  //message from renderer.js
+  // mainWindow.webContents.on('did-finish-load', () => {
+  //   mainWindow.webContents.send('main-process-messages', 'webContents event "did-finish-load" called');
+  // });
 }
 
 // This method will be called when Electron has finished
