@@ -22,6 +22,9 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.webContents.send('main-process-messages', 'webContents event "did-finish-load" called');
+  });
 }
 
 // This method will be called when Electron has finished
