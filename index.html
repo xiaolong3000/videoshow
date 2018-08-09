@@ -11,9 +11,12 @@
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron . 
+    <div id="test">123</div>
   
-  
- 
+    <script>
+      var test=document.getElementById('test')
+      test.style.backgroundColor = "black";
+      </script>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
