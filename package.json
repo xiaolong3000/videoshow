@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "video.js": "^7.5.4",
-    "videojs-playlist": "^4.3.1"
+    "videojs-playlist": "^4.3.1",
+    "videojs-playlist-ui": "^3.5.2"
   }
 }

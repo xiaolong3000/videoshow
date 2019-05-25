@@ -3,21 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+    
   </head>
   <body>
     <video
-    id="my-player"
+    id="video"
     class="video-js"
     controls
     preload="auto"
-    poster="//vjs.zencdn.net/v/oceans.png"
+   
     data-setup='{}'>
   <source src="http://192.168.22.1:8080/vlc/1.mp4" type="video/mp4"></source>
 
 </video>
+<!-- <div class="vjs-playlist"></div>
+<video id="video" class="video-js" controls ></video> -->
+<script src="node_modules/video.js/dist/video.js"></script>
+<script src="node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
+
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
+    
     </script>
   </body>
 </html>
